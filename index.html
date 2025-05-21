@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - VirusRule</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <nav class="nav">
+        <div class="logo">
+            <a href="index.html">VirusRule</a>
+        </div>
+        <div class="navlinks">
+            <a href="index.html">Home</a>
+            <a href="viruses.html">Viruses</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+            <a href="faq.html">FAQ</a>
+        </div>
+        <div class="buttons">
+            <button class="learn-more">Learn More</button>
+            <button class="quiz">Take a quiz</button>
+        </div>
+    </nav>
+    <div>
+        <h1>Welcome!</h1>
+    </div>
+    <!-- Hero section -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Welcome to VirusRule-Learn About Viruses through Fun Quizzes</h1>
+            <p>Welcome to VirusEd, your go-to platform for learning about viruses through <br/>interactive quizzes. Our mission is to provide accurate, easy-to-understand <br/>information about viruses and their imact on human health.</p>
+            <div class="hero-buttons">
+                <button class="quiz" id="hero-quiz">Take a quiz!</button>
+                <button class="learn-more" id="hero-learn">Learn More</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="Images/virus.png" alt="This is an image of a virus">
+        </div>
+    </div>
+    <!-- Starter virus section -->
+    <div class="starter">
+        <h1 class="starter-title">Learn About Viruses in a Fun<br/>and Interactive Way!</h1>
+        <p class="starter-sub">Whether you’re a student, parent, or simply curious about how viruses work,<br/>our website offers a fun and interactive way to expand your knowledge.</p>
+        <div class="starter-content">
+            <div class="card">
+                <div class="card-image">
+                    <img class="starter-img" src="Images/starter-virus-card2.avif" alt="image of a bacteria cartoon">
+                </div>
+                <h1>Stomach Virus</h1>
+                <p>Discover viruses that cause tummy troubles like norovirus and rotavirus.</p>
+                <button class="starter-quiz-btn">Take a quiz</button>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img class="starter-img" src="Images/starter-virus-card.jpg" alt="image of a bacteria cartoon">
+                </div>
+                <h1>Respiratory Virus</h1>
+                <p>Use Explore viruses that affect breathing like the common cold, influenza, and more!</p>
+                <button class="starter-quiz-btn">Take a quiz</button>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img class="starter-img" src="Images/starter-virus-card.jpg" alt="image of a bacteria cartoon">
+                </div>
+                <h1>Respiratory Virus</h1>
+                <p>Use Explore viruses that affect breathing like the common cold, influenza, and more!</p>
+                <button class="starter-quiz-btn">Take a quiz</button>
+            </div>
+        </div>
+    </div>
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <div class="logo">VirusEd</div>
+                <ul class="footer-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="viruses.html">Virus</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="newsletter">
+                <p>Sign up for updates</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Email Address">
+                    <button type="submit">Sign up</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright © 2025 VirusEd, Inc. All rights reserved.</p>
+            <p>Designed by Zoja</p>
+        </div>
+    </footer>
+    <script>
+        window.onload = function() {
+          // Find all buttons with the class name
+          var buttons = document.querySelectorAll('.starter-quiz-btn');
+      
+          // Go through each button one by one
+          buttons.forEach(function(button) {
+            // When the button is clicked
+            button.onclick = function() {
+              alert("This feature is coming soon!");
+            };
+          });
+        };
+    </script>
+</body>
+</html>
