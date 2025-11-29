@@ -20,8 +20,8 @@
             <a href="faq.html">FAQ</a>
         </div>
         <div class="buttons">
+            <a href="#starter"><button class="quiz" >Take a quiz</button></a> <!--  -->
             <button class="learn-more">Learn More</button>
-            <button class="quiz">Take a quiz</button>
         </div>
     </nav>
     <!-- Hero section -->
@@ -30,7 +30,7 @@
             <h1>Welcome to VirusRule-Learn About Viruses through Fun Quizzes</h1>
             <p>Welcome to VirusEd, your go-to platform for learning about viruses through <br/>interactive quizzes. Our mission is to provide accurate, easy-to-understand <br/>information about viruses and their imact on human health.</p>
             <div class="hero-buttons">
-                <button class="quiz" id="hero-quiz">Take a quiz!</button>
+                <a href="#starter"><button class="quiz" id="hero-quiz">Take a quiz!</button></a> <!--  -->
                 <button class="learn-more" id="hero-learn">Learn More</button>
             </div>
         </div>
@@ -39,7 +39,7 @@
         </div>
     </div>
     <!-- Starter virus section -->
-    <div class="starter">
+    <div class="starter" id="starter">
         <h1 class="starter-title">Learn About Viruses in a Fun<br/>and Interactive Way!</h1>
         <p class="starter-sub">Whether you’re a student, parent, or simply curious about how viruses work,<br/>our website offers a fun and interactive way to expand your knowledge.</p>
         <div class="starter-content">
@@ -49,23 +49,62 @@
                 </div>
                 <h1>Stomach Virus</h1>
                 <p>Discover viruses that cause tummy troubles like norovirus and rotavirus.</p>
-                <button class="starter-quiz-btn">Take a quiz</button>
+                <button class="starter-quiz-btn" id="stomach-vir">Take a quiz</button>
             </div>
+
+            <!-- Modal Overlay -->
+    <div
+      id="overlay"
+      class="overlay"
+      aria-hidden="true"
+      role="dialog"
+      aria-labelledby="title"
+    >
+<div class="container">
+        <button id="close" class="close-x" aria-label="Close quiz">✕</button>
+        <header>
+          <h1 id="title">Virus Quiz</h1>
+          <img
+            src="Images/corona-gif.gif"
+            alt="Space Banner"
+            class="banner"
+          />
+        </header>
+
+        <div id="start-container">
+          <button id="start-btn" class="btn">Start Quiz</button>
+        </div>
+
+        <div id="quiz-container" class="hidden">
+          <div id="question" class="question"></div>
+          <ul class="options" id="options"></ul>
+          <button id="next-btn" class="btn hidden">Next Question</button>
+        </div>
+<div id="result-container" class="hidden">
+          <h2 id="result-message"></h2>
+          <p>Your score: <span id="score"></span></p>
+          <button id="restart-btn" class="btn">Play Again</button>
+        </div>
+      </div>
+    </div>
+
+                <!-- END OF MODAL -->
+
             <div class="card">
                 <div class="card-image">
                     <img class="starter-img" src="Images/starter-virus-card.jpg" alt="image of a bacteria cartoon">
                 </div>
                 <h1>Respiratory Virus</h1>
                 <p>Use Explore viruses that affect breathing like the common cold, influenza, and more!</p>
-                <button class="starter-quiz-btn">Take a quiz</button>
+                <button class="starter-quiz-btn" id="respiratory-vir">Take a quiz</button>
             </div>
             <div class="card">
                 <div class="card-image">
                     <img class="starter-img" src="Images/starter-virus-card.jpg" alt="image of a bacteria cartoon">
                 </div>
-                <h1>Respiratory Virus</h1>
-                <p>Use Explore viruses that affect breathing like the common cold, influenza, and more!</p>
-                <button class="starter-quiz-btn">Take a quiz</button>
+                <h1>Vector-Borne Virus</h1>
+                <p>These viruses can be borne from vectors, such as mosquitos. Interact to learn more!</p>
+                <button class="starter-quiz-btn" id="vector-vir">Take a quiz</button>
             </div>
         </div>
     </div>
@@ -95,8 +134,8 @@
             <p>Designed by Zoja</p>
         </div>
     </footer>
-    <script>
-        window.onload = function() {
+    <script src="index.js">
+        /*window.onload = function() {
           // Find all buttons with the class name
           var buttons = document.querySelectorAll('.starter-quiz-btn');
       
@@ -107,7 +146,8 @@
               alert("This feature is coming soon!");
             };
           });
-        };
+        };*/
+
     </script>
 </body>
 </html>

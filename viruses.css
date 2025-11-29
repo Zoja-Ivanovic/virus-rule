@@ -40,9 +40,8 @@
     border-radius: 50px;
 }
 .learn-more:hover{
-    background-color: #FFC265;
-    border: 1px solid #FFC265;
-    color: #161616;
+    transform: scale(0.9);
+    transition: .3s transform;
 }
 .quiz{
     border: 1px solid #FFC265;
@@ -50,9 +49,8 @@
     color: #161616;
 }
 .quiz:hover{
-    background-color: #511320;
-    border: 1px solid #FEFBF9;
-    color: #FEFBF9;
+    transform: scale(0.9);
+    transition: .3s transform;
 }
 /* Starter virus section*/
 .starter{
