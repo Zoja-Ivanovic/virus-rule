@@ -11,21 +11,30 @@ const resultContainer = document.getElementById("result-container")
 const resultMessage = document.getElementById("result-message")
 const scoreEl = document.getElementById("score")
 const restartBtn = document.getElementById("restart-btn")
+const title = document.getElementById("title")
 
-const quizData = [
+const quizData = {
+  stomach: {
+    name: `Stomach Virus Quiz`,
+    data: [
     {
       question:
         "Which virus commonly causes stomach flu (gastroenteritis) outbreaks on cruise ships?",
-      options: ["Norovirus", "Influenza", "HIV", "Rhinovirus"],
+      options: [ 
+        "Influenza", 
+        "Norovirus",
+        "HIV", 
+        "Rhinovirus"
+      ],
       answer: "Norovirus",
     },
     {
       question: "Which symptom is most typical of a stomach virus?",
       options: [
-        "Vomiting and diarrhea",
         "Coughing and sneezing",
         "Skin rash",
         "Ear pain",
+        "Vomiting and diarrhea",
       ],
       answer: "Vomiting and diarrhea",
     },
@@ -33,9 +42,9 @@ const quizData = [
       question:
         "How long should you wash your hands to help prevent stomach viruses?",
       options: [
-        "At least 20 seconds",
         "5 seconds",
         "10 seconds",
+        "At least 20 seconds",
         "Just rinse with water",
       ],
 answer: "At least 20 seconds",
@@ -49,16 +58,23 @@ answer: "At least 20 seconds",
     {
       question: "Rotavirus mainly affects which group most severely?",
       options: [
-        "Young children and infants",
         "Healthy adults",
         "Only the elderly",
         "Only athletes",
+        "Young children and infants",
       ],
       answer: "Young children and infants",
     },
   ]
+  }
+}
+
+let stomachData=quizData.stomach.data
+let stomachName=quizData.stomach.name
 let currentQIndex=0
 let score=0
+
+title.textContent = stomachName
 
 function openModal(){
     overlay.classList.add("active")
@@ -72,7 +88,7 @@ function showQuestion(){
     // Clear previous options
     optionsEl.innerHTML = ""
     nextBtn.classList.add("hidden") // Hide nextBtn until option picked
-    let currentQuestion = quizData[currentQIndex]
+    let currentQuestion = stomachData[currentQIndex]
     console.log(currentQuestion.answer)
     questionEl.textContent = currentQuestion.question
     currentQuestion.options.forEach(option=>{
@@ -114,7 +130,7 @@ function startQuiz(){
 
 function nextQuestion(){
   currentQIndex++
-  if(currentQIndex < quizData.length){
+  if(currentQIndex < stomachData.length){
     showQuestion()
   }else{
     endQuiz()
@@ -123,12 +139,12 @@ function nextQuestion(){
 function endQuiz(){
   quizContainer.classList.add("hidden")
   resultContainer.classList.remove("hidden")
-  //scoreEl.textContent = score +"/" +quizData.length : This would work
-  scoreEl.textContent = `${score} / ${quizData.length}`
+  //scoreEl.textContent = score +"/" +stomachData.length : This would work
+  scoreEl.textContent = `${score} / ${stomachData.length}`
     // ${*variable*} around variables so that java knows it is a variable since it's wrapped in backticks
-  if(score === quizData.length){
+  if(score === stomachData.length){
     resultMessage.textContent = "Good job! You got a perfect score!"
-  }else if(score <= quizData.length-1){
+  }else if(score <= stomachData.length-1){
     resultMessage.textContent = "Almost had it! Try again!"
   }else{
     resultMessage.textContent = "Missed it completely."}
@@ -137,7 +153,7 @@ function restartButton(){
   resultContainer.classList.add("hidden")
   startBox.classList.remove("hidden")
 }
-//console.log(quizData.length)
+//console.log(stomachData.length)
 startBtn.addEventListener("click", startQuiz)
 nextBtn.addEventListener("click", nextQuestion)
 restartBtn.addEventListener("click", restartButton) 
