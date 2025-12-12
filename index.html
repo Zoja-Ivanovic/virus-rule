@@ -49,10 +49,28 @@
                 </div>
                 <h1>Stomach Virus</h1>
                 <p>Discover viruses that cause tummy troubles like norovirus and rotavirus.</p>
-                <button class="starter-quiz-btn" id="stomach-vir">Take a quiz</button>
+                <button class="starter-quiz-btn" data-category="stomach" data-image="Images/starter-virus-card2.avif" id="stomach-vir">Take a quiz</button>
             </div>
+            <div class="card">
+                <div class="card-image">
+                    <img class="starter-img" src="Images/starter-virus-card.jpg" alt="image of a bacteria cartoon">
+                </div>
+                <h1>Respiratory Virus</h1>
+                <p>Use Explore viruses that affect breathing like the common cold, influenza, and more!</p>
+                <button class="starter-quiz-btn" data-category="respiratory" data-image="Images/starter-virus-card.jpg" id="respiratory-vir">Take a quiz</button>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img class="starter-img" src="Images/starter-virus-card3.jpg" alt="image of a bacteria cartoon">
+                </div>
+                <h1>Vector-Borne Virus</h1>
+                <p>These viruses can be borne from vectors, such as mosquitos. Interact to learn more!</p>
+                <button class="starter-quiz-btn" data-category="vector" data-image="Images/starter-virus-card3.jpg" id="vector-vir">Take a quiz</button>
+            </div>
+        </div>
+    </div>
 
-            <!-- Modal Overlay -->
+    <!-- Modal Overlay -->
     <div
       id="overlay"
       class="overlay"
@@ -65,9 +83,10 @@
         <header>
           <h1 id="title">Virus Quiz</h1>
           <img
-            src="Images/corona-gif.gif"
+            src="Images/starter-virus-card2.avif"
             alt="Space Banner"
             class="banner"
+            id="quiz-banner"
           />
         </header>
 
@@ -88,26 +107,8 @@
       </div>
     </div>
 
-                <!-- END OF MODAL -->
+    <!-- END OF MODAL -->
 
-            <div class="card">
-                <div class="card-image">
-                    <img class="starter-img" src="Images/starter-virus-card.jpg" alt="image of a bacteria cartoon">
-                </div>
-                <h1>Respiratory Virus</h1>
-                <p>Use Explore viruses that affect breathing like the common cold, influenza, and more!</p>
-                <button class="starter-quiz-btn" id="respiratory-vir">Take a quiz</button>
-            </div>
-            <div class="card">
-                <div class="card-image">
-                    <img class="starter-img" src="Images/starter-virus-card.jpg" alt="image of a bacteria cartoon">
-                </div>
-                <h1>Vector-Borne Virus</h1>
-                <p>These viruses can be borne from vectors, such as mosquitos. Interact to learn more!</p>
-                <button class="starter-quiz-btn" id="vector-vir">Take a quiz</button>
-            </div>
-        </div>
-    </div>
     <!-- Footer Section -->
     <footer>
         <div class="footer-content">
