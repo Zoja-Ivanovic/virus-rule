@@ -202,3 +202,50 @@ footer {
     color: rgba(255, 255, 255, 0.7);
     font-size: 13px;
 }
+
+/* Validation Css *//* ctrl+/ = comment  */
+
+.form-group {
+  /* margin-bottom: 14px; */
+  display: grid;
+  /* gap: 6px; */
+}
+
+
+.error-text {
+  color: #ff4d4d;
+  font-size: 12px;
+  min-height: 14px;
+}
+
+
+.success-msg {
+  color: #2ecc71;
+  font-weight: 600;
+  margin: 8px 0 14px;
+}
+
+
+.hint-text {
+  color: #9aa3b2;
+  font-size: 12px;
+}
+
+
+input.error,
+textarea.error,
+select.error {
+  border: 1px solid #ff4d4d;
+  outline: none;
+}
+
+
+input.success,
+textarea.success,
+select.success {
+  border: 1px solid #2ecc71;
+  outline: none;
+}
+
+/* c */
+
