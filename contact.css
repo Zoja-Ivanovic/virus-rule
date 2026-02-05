@@ -159,6 +159,12 @@ footer {
     text-decoration: none;
 }
 
+.newsletter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .newsletter {
     display: flex;
     align-items: center;
