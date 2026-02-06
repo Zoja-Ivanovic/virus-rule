@@ -205,7 +205,6 @@ function showQuestion(){
     optionsEl.innerHTML = ""
     nextBtn.classList.add("hidden") // Hide nextBtn until option picked
     let currentQuestion = quizContent[currentQIndex]
-    console.log(currentQuestion.answer)
     questionEl.textContent = currentQuestion.question
     currentQuestion.options.forEach(option=>{
         const li = document.createElement("li")
